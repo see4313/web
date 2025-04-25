@@ -29,4 +29,4 @@ console.log(num2 !==num1); // ===값, 타입 비교
 //논리연산자.
 console.clear();
 console.log(num1 >= num2 || num1 < 100);
-console.log(num1 >= num2 && (!num1 < 100));
+console.log(num1 >= num2 && (!num1 < 100)); //()안이 F인데 괄호 앞에 !붙여서 반댓값인 T가 나와서 T
