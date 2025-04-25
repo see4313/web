@@ -8,7 +8,7 @@ num2 = parseInt(num2); //"17" -> 17
 num1++; //31
 let result = ++num1 + --num2; // 30 + 17 = 47, "30" + 17" = "3017"; 47
 console.log(result, num1, num2);
-// ++, -- 위치가 숫자의 앞이냐 뒤냐에 따라 결과값이 달라진다 (왼쪽 연산전, 오른쪽 연산 후)
+// ++, -- 위치가 숫자의 앞이냐 뒤냐에 따라 결과값이 달라진다 (왼쪽 연산전, 오른쪽 연산이 끝난 후 다음부터 실행)
 console.log(result);
 // result 값을 input#result의 value 속성에 대입.
 document.querySelector('#result').value = result;
