@@ -1,7 +1,7 @@
 //condition.js
 let isTrue = true;
-let num1 = 5;
-let num2 = 10;
+let num11 = 5;
+let num23 = 10;
 
 isTrue = 3 < 5;
 isTrue = num1 < 5;
