@@ -6,18 +6,25 @@ console.log(result);
 // ~80 => "B"
 // ~70 => "C"
 // ~60 => "D" 그 외 "F"
-if (result >= 90) {
-  console.log("A");
+if (result >= 95) {
+  console.log(result + " A+");
+} else if (result >= 90 ) {
+  console.log(result + " A");
+} else if (result >= 85) {
+  console.logt(result + " B+");
 } else if (result >= 80) {
-  console.log("B");
+  console.log(result + " B");
+} else if (result >= 75) {
+  console.log(result + " C+");
 } else if (result >= 70) {
-  console.log("C");
+  console.log(result + " C");
+} else if (result >= 65) {
+  console.log(result + " D+");
 } else if (result >= 60) {
-  console.log("D");
+  console.log(result + " D");
 } else {
-  console.log("F");
+  console.log(result + " F");
 }
-
 
 // if(result >= 60) {
 //   console.log("pass");
