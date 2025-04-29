@@ -21,8 +21,8 @@ function printGugudan(dan = 5) {
     document.write(`<p>${dan} * ${i} = ${dan * i}</p>`)
   }
 }
-// 함수는 실행하려고 하면 호출해줘야한다.
-printGugudan(5);
+
+printGugudan(5); // function 함수는 기능을 실행하려고 하면 호출해줘야한다.
 
 // printStar(2, '🌞');
 
