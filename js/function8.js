@@ -6,9 +6,12 @@ let data = JSON.parse(json); // json문자열을 객체로 변환. (parse=해석
 console.log(data); // 객체.
 
 //button<삭제> 템플릿.
-let btnTemplate = "<button calss='btn btn-danger' onclick ='deleteTr(event)'>삭제</button>";
+let btnTemplate = "<button class='btn btn-danger' onclick ='deleteTr(event)'>삭제</button>";
+function deleteTr(event){
+  event.target.parentElement.parentElement.remove();
+}
 
-console.clear(); //로그 지우기.
+// console.clear(); //로그 지우기.
 
 //속성을 정의. , 함수안에서 선언된 변수는 함수 안에서만 사용.
 let fields = ['id', 'first_name', 'gender', 'salary'];
@@ -46,14 +49,14 @@ document.querySelector('table.table>tbody').innerHTML = list;
 
 // 2. 값을 선택하는 이벤트 - select "change"; 
 document.querySelector('select#selectGender').addEventListener('change', function () {
-  let changeValue = document.querySelector('#selecGender').value;
+  let changeValue = document.querySelector('#selectGender').value;
   let list = "";
   for (let emp of data) {
-    if (searchValue == 'All' || searchValue == emp.gender) {
+    if (changeValue == 'All' || changeValue == emp.gender) {
       list += makeTr(emp);
     }
   }
-  document.querySelector('table.table>tbody').innerHTML = list;
+  document.querySelector('table.table>tbody').innerHTML= list;
 });
 
 
