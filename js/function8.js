@@ -50,6 +50,7 @@ document.querySelector('table.table>tbody').innerHTML = list;
 // 2. 값을 선택하는 이벤트 - select "change"; 
 document.querySelector('select#selectGender').addEventListener('change', function () {
   let changeValue = document.querySelector('#selectGender').value;
+  console.log(this);
   let list = "";
   for (let emp of data) {
     if (changeValue == 'All' || changeValue == emp.gender) {
