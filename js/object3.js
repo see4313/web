@@ -33,7 +33,7 @@ result = numAry.every(function (item) {
 } else {
   return false;
 }
-  }) // 방법3 을 간편하게 하면 방법 1
+  }) //방법3
 
 numAry.forEach(function (item) {
     console.log(item);

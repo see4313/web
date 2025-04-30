@@ -16,12 +16,11 @@ document.querySelectorAll('ul button').forEach(function(item){
 });
 
 // li에 스타일.
-document.querySelector('li').forEach(item => {
-  console.log(item);
+document.querySelectorAll('li').forEach(item => {
   item.addEventListener('mouseover', function() {
-    item.style.backgroundColor = "cyan";
+    item.style.backgroundColor = "red";
   })
-  item.addEventListener('mouseout', function (){
+  item.addEventListener('mouseout', function () {
     item.style.backgroundColor = "";
   })
 });
@@ -30,7 +29,7 @@ document.querySelector('li').forEach(item => {
 //콜백함수
 function addCallback() {
     let fruit = document.getElementById('fruit').value;
-    let price = document.querySelector('#price').value;
+    let price = document.querySelector('#price').value; //getElementById = querySelector
 
     // 입력값이 있는지 체크
     if(!fruit || !price) { // !는 not의 의미
@@ -64,15 +63,22 @@ function createLi(fruitName, fruitPrice) {
   btn.addEventListener('click', function (){
     btn.parentElement.remove();
   });  //클릭이벤트 등록
+   
+  li.addEventListener('mouseover', function(){
+    li.style.backgroundColor= "red";
+  })
+  li.addEventListener('mouseout', function(){
+    li.style.backgroundColor ="";
+  })
 
 
-  
   li.appendChild(sp1);   // appendChild는 순서가 중요. 먼저 쓰면 먼저 나옴.
-  li.appendChild(txt);
+  li.appendChild(txt); // "띄우기"
   li.appendChild(sp2);
   li.appendChild(btn);
 
   return li;  //<li/> 반환.
 } // end of createLi().
 
- 
+ // 추가등록에도 마우스색상 들어가게하기 
+ // 19장 실습& 읽어보기 
